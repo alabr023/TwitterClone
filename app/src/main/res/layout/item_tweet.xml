@@ -31,10 +31,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
         app:layout_constraintTop_toBottomOf="@+id/tvUsername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constrainedWidth="true"
-        tools:text = "teeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeest" />
+        tools:text="teeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeestteeeeeeeeeeeeeeeeeeeeeeeeest" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvUsername"
+        app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+        app:layout_constraintTop_toTopOf="@+id/tvUsername" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

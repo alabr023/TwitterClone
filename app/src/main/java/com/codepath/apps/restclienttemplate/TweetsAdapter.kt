@@ -17,6 +17,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
         val context = parent.context
         val inflater = LayoutInflater.from(context)
 
+
         val view = inflater.inflate(R.layout.item_tweet, parent, false)
 
         return ViewHolder(view)
@@ -27,6 +28,7 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
 
         holder.tvUserName.text = tweet.user?.name
         holder.tvTweetBody.text = tweet.body
+        holder.tvTime.text = tweet.getFormattedTimestamp()
 
         Glide.with(holder.itemView).load(tweet.user?.publicImageUrl).into(holder.ivProfileImage)
     }
@@ -51,5 +53,6 @@ class TweetsAdapter(val tweets: ArrayList<Tweet>) : RecyclerView.Adapter<TweetsA
         val ivProfileImage = itemView.findViewById<ImageView>(R.id.ivProfileImage)
         val tvUserName = itemView.findViewById<TextView>(R.id.tvUsername)
         val tvTweetBody = itemView.findViewById<TextView>(R.id.tvTweetBody)
+        val tvTime = itemView.findViewById<TextView>(R.id.tvTime)
     }
 }
